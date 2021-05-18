@@ -1,0 +1,5 @@
+package dev.kerbow.game;
+
+public class RoomManager {
+
+}

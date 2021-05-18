@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring accessors="true" comment="Delete element from project &apos;ProjectB&apos;&#x0D;&#x0A;- Original project: &apos;ProjectB&apos;&#x0D;&#x0A;- Original element: &apos;ProjectB/src/main/java/dev.kerbow.fixtures.Fixtures&apos;" description="Delete element" element1="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;dev.kerbow.fixtures.Fixtures" element2="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;dev.kerbow.fixtures" element3="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;dev.kerbow" element4="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;dev" elements="4" flags="589830" id="org.eclipse.jdt.ui.delete" resources="0" stamp="1621374124145" subPackages="false" version="1.0"/>
+</session>
