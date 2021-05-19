@@ -463,7 +463,7 @@ public class RoomManager {
 		 * Items: Battery Pack
 		 */
 		
-		this.rooms[32] = northernCorridor;
+		this.rooms[31] = northernCorridor;
 		
 		Room researcherRoom = new Room(
 				"Researcher's Room",
@@ -476,7 +476,7 @@ public class RoomManager {
 		 * Items: Handgun Magazine 1x15, Keeper's Diary, Battery Pack
 		 */
 		
-		this.rooms[33] = researcherRoom;
+		this.rooms[32] = researcherRoom;
 		
 		Room tigerRoom = new Room(
 				"Tiger Statue Room",
@@ -488,7 +488,7 @@ public class RoomManager {
 		 * Items: Shotgun Shells 1x6, MO Disk
 		 */
 		
-		this.rooms[34] = tigerRoom;
+		this.rooms[33] = tigerRoom;
 		
 		Room hiddenWardrobe = new Room(
 				"Hidden Wardrobe",
@@ -499,7 +499,7 @@ public class RoomManager {
 		 * Exits: West: Art Room
 		 */
 		
-		this.rooms[35] = hiddenWardrobe;
+		this.rooms[34] = hiddenWardrobe;
 		
 		Room outsidePatio = new Room(
 				"Outside Patio",
@@ -513,7 +513,7 @@ public class RoomManager {
 		 * Items: Dagger, Grenade Launcher, Green Herb x2
 		 */
 		
-		this.rooms[36] = outsidePatio;
+		this.rooms[35] = outsidePatio;
 		
 		Room armorRoom = new Room(
 				"Armor Room",
@@ -525,7 +525,7 @@ public class RoomManager {
 		 * Items: Jewelry Box, Death Mask Without Eyes, Nose, or Mouth
 		 */
 		
-		this.rooms[37] = armorRoom;
+		this.rooms[36] = armorRoom;
 		
 		Room largeGallery = new Room(
 				"Large Gallery",
@@ -539,7 +539,7 @@ public class RoomManager {
 		 * Items: Death Mask without a Mouth
 		 */
 		
-		this.rooms[38] = largeGallery;
+		this.rooms[37] = largeGallery;
 		
 		Room deerRoom = new Room(
 				"Deer Room",
@@ -553,7 +553,7 @@ public class RoomManager {
 		 * Items: Red Herb
 		 */
 		
-		this.rooms[39] = deerRoom;
+		this.rooms[38] = deerRoom;
 		
 		Room scientistRoom = new Room(
 				"Scientist's Room",
@@ -566,7 +566,7 @@ public class RoomManager {
 		 * Items: Researcher's Will, Fish hook, Bee Specimen, Lure without a Hook, Wind Crest
 		 */
 		
-		this.rooms[40] = scientistRoom;
+		this.rooms[39] = scientistRoom;
 		
 		Room bedroom = new Room(
 				"Bedroom",
@@ -579,7 +579,7 @@ public class RoomManager {
 		 * Items: Fist Aid Box, First Aid Spray, Ink Ribbon x3, Green Herb
 		 */
 		
-		this.rooms[41] = bedroom;
+		this.rooms[40] = bedroom;
 		
 		Room pillarRoom = new Room(
 				"Pillar Room",
@@ -594,7 +594,7 @@ public class RoomManager {
 		 * Items: Green Herb, Radio
 		 */
 		
-		this.rooms[42] = pillarRoom;
+		this.rooms[41] = pillarRoom;
 		
 		Room greenhouse = new Room(
 				"Greenhouse",
@@ -607,7 +607,7 @@ public class RoomManager {
 		 * Items: Green Herb x5, Death Mask Without Eyes
 		 */
 		
-		this.rooms[43] = greenhouse;
+		this.rooms[42] = greenhouse;
 		
 		Room atticEntry = new Room(
 				"Attic Entry",
@@ -619,7 +619,7 @@ public class RoomManager {
 		 * 		  East: Attic
 		 */
 		
-		this.rooms[44] = greenhouse;
+		this.rooms[43] = greenhouse;
 		
 		Room smallDiningRoom = new Room(
 				"Small Dining Room",
@@ -632,7 +632,7 @@ public class RoomManager {
 		 * Items: Handgun Magazine 1x15, Handgun Magazine 1x15, Music mid-pages
 		 */
 		
-		this.rooms[45] = smallDiningRoom;
+		this.rooms[44] = smallDiningRoom;
 		
 		Room pianoBar = new Room(
 				"Piano Bar",
@@ -646,7 +646,7 @@ public class RoomManager {
 		 * Items: Missing Music, Gold Emblem, Trevor's Diary
 		 */
 		
-		this.rooms[46] = pianoBar;
+		this.rooms[45] = pianoBar;
 		
 		Room roofedPassage = new Room(
 				"Roofed Passage",
@@ -657,7 +657,7 @@ public class RoomManager {
 		 * Exits: NorthWest: Garden Shed
 		 */
 		
-		this.rooms[47] = roofedPassage;
+		this.rooms[46] = roofedPassage;
 		
 		Room gardenShed = new Room(
 				"Garden Shed",
@@ -669,7 +669,7 @@ public class RoomManager {
 		 * Items: Shotgun Shells 1x6, Battery Pack, First Aid Spray x2, Grenade Shells 1x6
 		 */
 		
-		this.rooms[48] = gardenShed;
+		this.rooms[47] = gardenShed;
 		
 		Room courtyardStudy = new Room(
 				"Courtyard Study",
@@ -680,7 +680,7 @@ public class RoomManager {
 		 * Items: Shotgun Shells 1x6, Metal Object, Battery Pack
 		 */
 		
-		this.rooms[49] = courtyardStudy;
+		this.rooms[48] = courtyardStudy;
 		
 		Room eCorridor = new Room(
 				"Elevator Corridor",
@@ -693,7 +693,7 @@ public class RoomManager {
 		 * Items: Green Herb x2, Red Herb x1
 		 */
 		
-		this.rooms[50] = eCorridor;
+		this.rooms[49] = eCorridor;
 		
 		Room materialsRoom = new Room(
 				"Materials Room",
@@ -704,7 +704,7 @@ public class RoomManager {
 		 * Items: Shotgun Shells 1x6, Acid Shells 1x6, Battery Pack, Battery
 		 */
 		
-		this.rooms[51] = materialsRoom;
+		this.rooms[50] = materialsRoom;
 		
 		Room trophyRoom = new Room(
 				"Trophy Room",
@@ -715,7 +715,7 @@ public class RoomManager {
 		 * Items: Grenade Shells 1x6, Red Gemstone, Yellow Gemstone, Mail to the Chief of Security, Dagger
 		 */
 		
-		this.rooms[52] = trophyRoom;
+		this.rooms[51] = trophyRoom;
 		
 		Room attic = new Room(
 				"Attic",
@@ -728,6 +728,6 @@ public class RoomManager {
 		 * Items: Death Mask Without a Nose, Assault Shotgun
 		 */
 		
-		this.rooms[53] = attic;
+		this.rooms[52] = attic;
 	}
 }
