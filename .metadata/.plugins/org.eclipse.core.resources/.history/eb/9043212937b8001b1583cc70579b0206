@@ -1,0 +1,185 @@
+package dev.kerbow.game;
+
+import dev.kerbow.fixtures.Room;
+
+public class RoomManager {
+
+	Room startingRoom;
+	Room[] rooms;
+	//Room[] firstFloor;
+	//Room[] secondFloor;
+	
+	public void init() {
+		Room foyer1F = new Room(
+				"The Foyer",
+				"a large foyer",
+				"You find yourself inside the foyer off a large mansion in the Arklay Mountains. You, your fellow S.T.A.R.S." + "\n"
+				+ " members Barry Burton and captain Albert Wesker are with you. You were chased into this mansion by what" + "\n" 
+				+ " could only be described as 'ravenous zombie dogs.' The entire thing sounds ridiculous, but after seeing" + "\n"
+				+ " the bodies of your fellow S.T.A.R.S members Kevin Dooley and Joseph Frost, well... whatever fantasy you" + "\n" 
+				+ " imagined before has well and truly become a nightmare. Something tells you this mansion holds the" + "\n" 
+				+ " secrets that could unlock the terrifying events behind their deaths... and there are only three S.T.A.R.S." + "\n"
+				+ " members left to seek them. The whereabouts of Chris Redfield, your partner, are unknown. Take care, Jill Valentine!");
+		/* Exits: The South Exit is blocked! You can't leave that way, not with the zombie dogs out there!
+		 *		  West: Beyond the West door is a large Dining Room.
+		 *		  East: Beyond the East door is an Art Room.
+		 *		  Up: In front of you are stairs that lead to the Second Floor.
+		 *		  North: At the midpoint of the stairs is a door that leads North, outside the mansion.
+		 *		  North East: Large Art Room: Requires Helmet Key
+		 * Items: Barry gives you a Lockpick here, after returning from the Dining room.
+		 *
+		 */
+		//Item description here. In the Foyer, there's an Ink Ribbon x2 and a Typewriter to save your progress
+		this.rooms[0] = foyer1F;
+		this.startingRoom = foyer1F;
+		
+		Room diningRoom = new Room(
+				"The Dining Room",
+				"a large, formal dining room",
+				"You and Barry enter the long dining room. It's certainly a strange scene: the table is set up completely, with half-eaten food"
+				+ " still on the plates, yet no sign of anyone even sitting in the chairs to eat! At the end of the dining room, however, there is"
+				+ " a roaring fireplace... and in front of it, a pool of blood! 'Blood...' Barry says, inspecting the small pool. 'Jill, see if"
+				+ " you can find any other clues. I'll be examining this. Let's just hope it's not Chris's...");
+		/*
+		 * Exits: There is an exit to the North at the left end of the dining hall.
+		 * Items: Ink Ribbon, Typewriter, Emblem, Blue Jewel (after pushing statue), Shield Key (needs gold emblem)
+		 */
+		this.rooms[1] = diningRoom;
+		
+		Room teaRoom = new Room(
+				"The Tea Room",
+				"a small room attached to a long hallway",
+				"You come to a long hallway. On your left, there is a small room at the end of the hall. You can hear a strange noise " + "\n"
+				+ "coming from there...");
+		/*
+		 * Exits: North, to the Northern Corridor
+		 * 		  North East, to the Bar
+		 * 		  Down: Turning east leads you to a flight of stairs down to the kitchen
+		 *        West: To the West Wing outer Stairway
+		 *        South: Back to the Dining Room
+		 * Items: Kenneth's film, on the body of fellow S.T.A.R.S member Kenneth J. Sullivan
+		 */
+		this.rooms[2] = teaRoom;
+		
+		Room westWingOuterStairway = new Room(
+				"The West Wing Outer Stairway",
+				"a small hallway with stairs leading up at the end",
+				"The West Wing Outer Stairway contains a short hallway that opens up to a small room." + "\n" +
+				"A staircase at the end winds up to the second floor.");
+		/*
+		 * Exits: Up, to the second floor
+		 * 		  East, to the Tea room
+		 * Items: Green Herb ,Handgun Magazine 1x15
+		 */
+		this.rooms[3] = westWingOuterStairway;
+		
+		Room mirrorCorridor = new Room(
+				"Mirror Corridor",
+				"A corridor with mirrors on the walls",
+				"This strange corridor is filled with mirrors... as well as two unwelcome surprises! Two zombies are here, but they aren't " + "\n" 
+				+ "moving yet. Be careful!");
+		/*
+		 * Exits: Down: West Wing Outer Stairway
+		 * 		  East: 'Death' Passage
+		 * 		  South: West Wing Inner Stairway
+		 * 		  South East: Dining Room 2F
+		 * Items: Green Herb, Golden Arrow, Arrowhead ,Handgun Magazine 1x15
+		 */
+		this.rooms[4] = mirrorCorridor;
+		
+		Room diningHall2F = new Room(
+				"Dining Hall Second Floor",
+				"The Second Floor of the Dining Room",
+				"You didn't notice it before, but it seemed that there was a second floor balcony in the dining room, inaccessable from " + "\n"
+				+ " the room itself. Be careful: there's a zombie shuffling around here!");
+		/*
+		 * Exits: North: Mirror Corridor
+		 * 		  North West: West Wing Inner Stairway
+		 * 		  East: Main Hall 2nd Floor
+		 * Items: Dagger,Statue that you can push
+		 */
+		this.rooms[5] = diningHall2F;
+		
+		Room foyer2F = new Room(
+				"Foyer Second Floor",
+				"The Second Floor of the Main Hall",
+				"This is the second floor of the foyer, which is home to a series of balconies overlooking the foyer's first floor.");
+		/*
+		 * Exits: West: Dining Room Second Floor
+		 * 		  South West: Outside Balcony
+		 * 		  South East: Outside Patio
+		 * 		  North East: 'C' shaped Corridor
+		 * 		  North: Halfway down the stairs to the Graveyard
+		 * 		  Down: Foyer First Floor
+		 * Items: None
+		 */
+		this.rooms[6] = foyer2F;
+		
+		Room graveyard = new Room(
+				"The Graveyard",
+				"A creepy graveyard behind the mansion.",
+				"Of all the things to find on the mansion's property, why is there a graveyard!? In the middle is a long corridor that " + "\n"
+				+ " leads to a large statue. Be careful, as there are two zombies shuffling around!");
+		/*
+		 * Exits: Down: only opens after putting in the green arrowhead
+		 * 		  East: Large Gallery
+		 * 		  South: Back to Foyer 1st Floor
+		 * Items: Shotgun Shells 1x6
+		 */
+		this.rooms[7] = graveyard;
+		
+		Room crypt = new Room(
+				"Crypt",
+				"A creepy crypt behind the graveyard statue",
+				"If that graveyard was creepy, this is even worse! It's like something straight out of a medeival catacomb: bones everywhere," + "\n"
+				+ " sarcophagi, and what looks like a coffin dangling from the ceiling by four chains. On your left are four prominent skulls," + "\n" 
+				+ " a closer inspection of which suggests that something should be placed on them. A mask, maybe?");
+		/*
+		 * Exits: Up, to the Graveyard
+		 * Items: The Book of Curses
+		 * 		  The Sword Key
+		 * 		  Shotgun Shells 1x6, after putting the masks in place
+		 * 		  Stone and Metal Object
+		 */
+		this.rooms[8] = crypt;
+		
+		Room artRoom = new Room(
+				"Art Room",
+				"A room with various paintings",
+				"A small room where you can find numerous paintings mounted on the walls. In the middle of the room is a statue of a woman" + "\n" 
+				+ " holding a vase. You can see something inside it, but it's too tall for you to grab. You can also hear a zombie shuffling around...");
+		/*
+		 * Exits: West: Foyer 1st Floor
+		 * 		  East: Hidden Wardrobe
+		 * 		  South East: 'L' Corridor
+		 * Items: Map of the Mansion First Floor
+		 *        Dagger
+		 *        Shelf that you can push to access the map in the vase
+		 */
+		this.rooms[9] = artRoom;
+		
+		Room lCorridor = new Room(
+				"'L' Corridor",
+				"A large corridor in the shape of an 'L'",
+				"A long corridor that winds behind around the East side of the mansion." + "\n"
+				+ "You can hear the barking of two dogs behind the windows...");
+		/* Exits: West: Art Room
+		 * 		  North: Winding Corridor
+		 * Items: Dagger, Handgun Magazine 1x15
+		 */
+		this.rooms[10] = lCorridor;
+		
+		Room windingCorridor = new Room(
+				"Winding Corridor",
+				"An oddly shaped Corridor",
+				"Yet another oddly shaped corridor in the Mansion. Who designed this place, anyway?");
+		/*
+		 * Exits: North: Bathroom
+		 * 		  South: 'L' Corridor
+		 * 		  East: Outside Boiler
+		 * 		  West: Dark Corridor
+		 * 		  South East: Marble Room
+		 */
+		this.rooms[11] = windingCorridor;
+	}
+}
