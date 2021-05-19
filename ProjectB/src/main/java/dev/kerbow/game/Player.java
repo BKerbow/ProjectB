@@ -4,5 +4,13 @@ import dev.kerbow.fixtures.Room;
 
 public class Player {
 
-	Room currentRoom;
+	public Room currentroom;
+	
+	public Player() {
+		
+	}
+	
+	public Player(Room currentRoom) {
+		this.currentroom = currentRoom;
+	}
 }

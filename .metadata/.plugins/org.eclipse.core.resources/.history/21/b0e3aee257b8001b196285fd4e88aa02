@@ -4,7 +4,7 @@ import dev.kerbow.fixtures.Room;
 
 public class RoomManager {
 
-	private static Room[] rooms = new Room[55];
+	private static Room[] rooms = new Room[52];
 	private static Room startingRoom;
 	//Room[] firstFloor;
 	//Room[] secondFloor;
@@ -636,72 +636,5 @@ public class RoomManager {
 		 * Exits: SouthWest: Attic Entry
 		 * Items: Death Mask Without a Nose, Assault Shotgun
 		 */
-		
-		startingRoom = foyer1F;
-		
-		rooms[0] = foyer1F;
-		rooms[1] = diningRoom;
-		rooms[2] = teaRoom;
-		rooms[3] = westWingOuterStairway;
-		rooms[4] = mirrorCorridor;
-		rooms[5] = diningHall2F;
-		rooms[6] = foyer2F;
-		rooms[7] = graveyard;
-		rooms[8] = crypt;
-		rooms[9] = artRoom;
-		rooms[10] = lCorridor;
-		rooms[11] = windingCorridor;
-		rooms[12] = marbleRoom;
-		rooms[13] = livingRoom;
-		rooms[14] = darkCorridor;
-		rooms[15] = eastWingStairway1F;
-		rooms[16] = eastWingStoreroom;
-		rooms[17] = eastWingStairway2F;
-		rooms[18] = cCorridor;
-		rooms[19] = smallLibrary;
-		rooms[20] = restingRoom;
-		rooms[21] = slidingTrapRoom;
-		rooms[22] = outsideBoiler;
-		rooms[23] = bathroom;
-		rooms[24] = outsideBalcony;
-		rooms[25] = teaRoomB1;
-		rooms[26] = kitchen;
-		rooms[27] = uGPassage1;
-		rooms[28] = uGPassage2;
-		rooms[29] = westWingInnerStairway2F;
-		rooms[30] = westWingInnerStairway1F;
-		rooms[31] = medicalStorageRoom;
-		rooms[32] = smallStoreroom;
-		rooms[33] = deathPassage;
-		rooms[34] = northernCorridor;
-		rooms[35] = researcherRoom;
-		rooms[36] = tigerRoom;
-		rooms[37] = hiddenWardrobe;
-		rooms[38] = outsidePatio;
-		rooms[39] = armorRoom;
-		rooms[40] = largeGallery;
-		rooms[41] = deerRoom;
-		rooms[42] = scientistRoom;
-		rooms[43] = bedroom;
-		rooms[44] = pillarRoom;
-		rooms[45] = greenhouse;
-		rooms[46] = atticEntry;
-		rooms[47] = smallDiningRoom;
-		rooms[48] = pianoBar;
-		rooms[49] = roofedPassage;
-		rooms[50] = gardenShed;
-		rooms[51] = courtyardStudy;
-		rooms[52] = eCorridor;
-		rooms[53] = materialsRoom;
-		rooms[54] = trophyRoom;
-		rooms[55] = attic;
-	}
-	
-	public static Room[] getRooms() {
-		return rooms;
-	}
-	
-	public static Room getStartingRoom() {
-		return startingRoom;
 	}
 }

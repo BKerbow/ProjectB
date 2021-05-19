@@ -1,9 +1,12 @@
 package dev.kerbow.fixtures;
 
-public class Fixtures {
+public abstract class Fixtures {
 
-	String name;
-	String shortDescription;
-	String longDescription;
-	//String item;
+	public String name, shortDescription, longDescription;
+	
+	public Fixtures(String name, String shortDescription, String longDescription) {
+		this.name = name;
+		this.shortDescription = shortDescription;
+		this.longDescription = longDescription;
+	}
 }

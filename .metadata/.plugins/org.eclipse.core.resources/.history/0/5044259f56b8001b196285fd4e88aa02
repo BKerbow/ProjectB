@@ -4,12 +4,12 @@ import dev.kerbow.fixtures.Room;
 
 public class RoomManager {
 
-	private static Room[] rooms = new Room[55];
-	private static Room startingRoom;
+	Room startingRoom;
+	Room[] rooms;
 	//Room[] firstFloor;
 	//Room[] secondFloor;
 	
-	public static void init() {
+	public void init() {
 		Room foyer1F = new Room(
 				"The Foyer",
 				"a large foyer",
@@ -29,6 +29,8 @@ public class RoomManager {
 		 * Items: Barry gives you a Lockpick here, after returning from the Dining room.
 		 *
 		 */ 
+		this.rooms[0] = foyer1F;
+		this.startingRoom = foyer1F;
 		
 		Room diningRoom = new Room(
 				"The Dining Room",
@@ -41,6 +43,7 @@ public class RoomManager {
 		 * Exits: There is an exit to the North at the left end of the dining hall.
 		 * Items: Ink Ribbon, Typewriter, Emblem, Blue Jewel (after pushing statue), Shield Key (needs gold emblem)
 		 */
+		this.rooms[1] = diningRoom;
 		
 		Room teaRoom = new Room(
 				"The Tea Room",
@@ -55,6 +58,7 @@ public class RoomManager {
 		 *        South: Back to the Dining Room
 		 * Items: Kenneth's film, on the body of fellow S.T.A.R.S member Kenneth J. Sullivan
 		 */
+		this.rooms[2] = teaRoom;
 		
 		Room westWingOuterStairway = new Room(
 				"The West Wing Outer Stairway",
@@ -66,6 +70,7 @@ public class RoomManager {
 		 * 		  East, to the Tea room
 		 * Items: Green Herb ,Handgun Magazine 1x15
 		 */
+		this.rooms[3] = westWingOuterStairway;
 		
 		Room mirrorCorridor = new Room(
 				"Mirror Corridor",
@@ -79,6 +84,7 @@ public class RoomManager {
 		 * 		  South East: Dining Room 2F
 		 * Items: Green Herb, Golden Arrow, Arrowhead ,Handgun Magazine 1x15
 		 */
+		this.rooms[4] = mirrorCorridor;
 		
 		Room diningHall2F = new Room(
 				"Dining Hall Second Floor",
@@ -91,6 +97,7 @@ public class RoomManager {
 		 * 		  East: Main Hall 2nd Floor
 		 * Items: Dagger,Statue that you can push
 		 */
+		this.rooms[5] = diningHall2F;
 		
 		Room foyer2F = new Room(
 				"Foyer Second Floor",
@@ -105,6 +112,7 @@ public class RoomManager {
 		 * 		  Down: Foyer First Floor
 		 * Items: None
 		 */
+		this.rooms[6] = foyer2F;
 		
 		Room graveyard = new Room(
 				"The Graveyard",
@@ -117,6 +125,7 @@ public class RoomManager {
 		 * 		  South: Back to Foyer 1st Floor
 		 * Items: Shotgun Shells 1x6
 		 */
+		this.rooms[7] = graveyard;
 		
 		Room crypt = new Room(
 				"Crypt",
@@ -131,6 +140,7 @@ public class RoomManager {
 		 * 		  Shotgun Shells 1x6, after putting the masks in place
 		 * 		  Stone and Metal Object
 		 */
+		this.rooms[8] = crypt;
 		
 		Room artRoom = new Room(
 				"Art Room",
@@ -145,6 +155,7 @@ public class RoomManager {
 		 *        Dagger
 		 *        Shelf that you can push to access the map in the vase
 		 */
+		this.rooms[9] = artRoom;
 		
 		Room lCorridor = new Room(
 				"'L' Corridor",
@@ -155,6 +166,7 @@ public class RoomManager {
 		 * 		  North: Winding Corridor
 		 * Items: Dagger, Handgun Magazine 1x15
 		 */
+		this.rooms[10] = lCorridor;
 		
 		Room windingCorridor = new Room(
 				"Winding Corridor",
@@ -167,6 +179,7 @@ public class RoomManager {
 		 * 		  West: Dark Corridor
 		 * 		  South East: Marble Room
 		 */
+		this.rooms[11] = windingCorridor;
 		
 		Room marbleRoom = new Room(
 				"Marble Room",
@@ -176,6 +189,7 @@ public class RoomManager {
 		 * Exits: South: Living Room
 		 * 		  West: Winding Corridor
 		 */
+		this.rooms[12] = marbleRoom;
 		
 		Room livingRoom = new Room(
 				"Living Room",
@@ -186,6 +200,7 @@ public class RoomManager {
 		 * Exits: North: Marble Room
 		 * Items: Dagger, Ink Ribbon x3, Shotgun
 		 */
+		this.rooms[13] = livingRoom;
 		
 		Room darkCorridor = new Room(
 				"Dark Corridor",
@@ -198,6 +213,7 @@ public class RoomManager {
 		 * 		  North West: Roofed Passage
 		 * 		  South: Large Gallery
 		 */
+		this.rooms[14] = darkCorridor;
 		
 		Room eastWingStairway1F= new Room(
 				"East Wing Stairway 1F",
@@ -208,6 +224,7 @@ public class RoomManager {
 		 * 		  South East: East Wing Storeroom
 		 * 		  Up: East Wing Stairway 2F
 		 */
+		this.rooms[14] = eastWingStairway1F;
 		
 		Room eastWingStoreroom = new Room(
 				"East Wing Storeroom",
@@ -217,6 +234,7 @@ public class RoomManager {
 		 * Exits: North: East Wing Stairway
 		 * Items: Item Box, Typewriter, Fuel Canteen, Kerosene, First Aid Spray, Incendiary Shells left by Barry, 1x6
 		 */
+		this.rooms[15] = eastWingStoreroom;
 		
 		Room eastWingStairway2F = new Room(
 				"East Wing Stairway 2F",
@@ -228,6 +246,8 @@ public class RoomManager {
 		 * 		  South East: Deer Room
 		 * 		  Far South East: Resting Room
 		 */
+		
+		this.rooms[16] = eastWingStairway2F;
 		
 		Room cCorridor = new Room(
 				"'C' Corridor",
@@ -241,6 +261,7 @@ public class RoomManager {
 		 * 		  West: Armor Room
 		 * Items: Wooden Mount
 		 */
+		this.rooms[17] = cCorridor;
 		
 		Room smallLibrary = new Room(
 				"Small Library",
@@ -251,6 +272,7 @@ public class RoomManager {
 		 * 		  East: East Wing Stairway 2F
 		 * Items: Dog Whistle, Handgun Magazine 1x15, Lighter, Botany book, Crumpled Memo
 		 */
+		this.rooms[18] = smallLibrary;
 		
 		Room restingRoom = new Room(
 				"Resting Room",
@@ -262,6 +284,7 @@ public class RoomManager {
 		 * 		  West: Sliding Trap Room
 		 * Items: Green Herb
 		 */
+		this.rooms[19] = restingRoom;
 		
 		Room slidingTrapRoom = new Room(
 				"Sliding Trap Room",
@@ -273,6 +296,8 @@ public class RoomManager {
 		 * Items: Dagger
 		 */
 		
+		this.rooms[20] = slidingTrapRoom;
+		
 		Room outsideBoiler = new Room(
 				"Outside Boiler",
 				"a small path outside",
@@ -283,6 +308,8 @@ public class RoomManager {
 		 * Items: Herbicide, Green Herb x2, Red Herb, Kerosene
 		 */
 		
+		this.rooms[21] = outsideBoiler;
+		
 		Room bathroom = new Room(
 				"Bathroom",
 				"a bathroom with bathtub",
@@ -291,6 +318,8 @@ public class RoomManager {
 		 * Exits: South: Winding Corridor
 		 * Items: Dagger
 		 */
+		
+		this.rooms[22] = bathroom;
 		
 		Room outsideBalcony = new Room(
 				"Outside Balcony",
@@ -303,6 +332,8 @@ public class RoomManager {
 		 * Items: Collar, Coin, Imitation of a Key
 		 */
 		
+		this.rooms[23] = outsideBalcony;
+		
 		Room teaRoomB1 = new Room(
 				"Tea Room B1",
 				"down the tea room stairs",
@@ -310,6 +341,8 @@ public class RoomManager {
 		/*
 		 * Exits: West: Kitchen
 		 */
+		
+		this.rooms[24] = teaRoomB1;
 		
 		Room kitchen = new Room(
 				"Kitchen",
@@ -322,6 +355,8 @@ public class RoomManager {
 		 * Items: Dagger
 		 */
 		
+		this.rooms[25] = kitchen;
+		
 		Room uGPassage1 = new Room(
 				"Underground Passage 1",
 				"a concrete passage",
@@ -331,6 +366,8 @@ public class RoomManager {
 		 * Exits: South: Winding Corridor
 		 * Items: Dagger, Red Herb, Blue Herb, Handgun Magazine 1x15
 		 */
+		
+		this.rooms[26] = uGPassage1;
 		
 		Room uGPassage2 = new Room(
 				"Underground Passage 2",
@@ -342,6 +379,8 @@ public class RoomManager {
 		 * Exits: South: Winding Corridor
 		 * Items: Dagger, Red Herb, Blue Herb, Handgun Magazine 1x15
 		 */
+		
+		this.rooms[27] = uGPassage2;
 		
 		Room westWingInnerStairway2F = new Room(
 				"West Wing Inner Stairway 2F",
@@ -356,6 +395,8 @@ public class RoomManager {
 		 * 		  Down: West Wing Inner Stairway 1F
 		 */
 		
+		this.rooms[28] = westWingInnerStairway2F;
+		
 		Room westWingInnerStairway1F = new Room(
 				"West Wing Inner Stairway 1F",
 				"a hallway with two rooms",
@@ -368,6 +409,8 @@ public class RoomManager {
 		 * Items: Dagger, Red Herb, Blue Herb, Handgun Magazine 1x15
 		 */
 		
+		this.rooms[28] = westWingInnerStairway1F;
+		
 		Room medicalStorageRoom = new Room(
 				"Medical Storage Room",
 				"a room filled with medical supplies",
@@ -378,6 +421,8 @@ public class RoomManager {
 		 * Items: Item Box, Typewriter, Body Disposal, Serum
 		 */
 		
+		this.rooms[29] = medicalStorageRoom;
+		
 		Room smallStoreroom = new Room(
 				"Small Storeroom",
 				"a small storage room",
@@ -386,6 +431,8 @@ public class RoomManager {
 		 * Exits: North: West Wing Inner Stairway
 		 * Items: Battery Pack, Broken Shotgun, Ink Ribbon x3, Kerosene
 		 */
+		
+		this.rooms[30] = smallStoreroom;
 		
 		Room deathPassage = new Room(
 				"Strange Passage",
@@ -399,6 +446,8 @@ public class RoomManager {
 		 * 		  North West: Mirror Corridor
 		 * Items: Dagger, Red Herb, Blue Herb, Handgun Magazine 1x15
 		 */
+		
+		this.rooms[31] = deathPassage;
 		
 		Room northernCorridor = new Room(
 				"Northern Corridor",
@@ -414,6 +463,8 @@ public class RoomManager {
 		 * Items: Battery Pack
 		 */
 		
+		this.rooms[32] = northernCorridor;
+		
 		Room researcherRoom = new Room(
 				"Researcher's Room",
 				"a small bedroom",
@@ -425,6 +476,8 @@ public class RoomManager {
 		 * Items: Handgun Magazine 1x15, Keeper's Diary, Battery Pack
 		 */
 		
+		this.rooms[33] = researcherRoom;
+		
 		Room tigerRoom = new Room(
 				"Tiger Statue Room",
 				"a small room",
@@ -435,6 +488,8 @@ public class RoomManager {
 		 * Items: Shotgun Shells 1x6, MO Disk
 		 */
 		
+		this.rooms[34] = tigerRoom;
+		
 		Room hiddenWardrobe = new Room(
 				"Hidden Wardrobe",
 				"a stuffy, hidden room",
@@ -443,6 +498,8 @@ public class RoomManager {
 		/*
 		 * Exits: West: Art Room
 		 */
+		
+		this.rooms[35] = hiddenWardrobe;
 		
 		Room outsidePatio = new Room(
 				"Outside Patio",
@@ -456,6 +513,8 @@ public class RoomManager {
 		 * Items: Dagger, Grenade Launcher, Green Herb x2
 		 */
 		
+		this.rooms[36] = outsidePatio;
+		
 		Room armorRoom = new Room(
 				"Armor Room",
 				"a room filled with suits of armor",
@@ -465,6 +524,8 @@ public class RoomManager {
 		 * Exits: East: 'C' Corridor
 		 * Items: Jewelry Box, Death Mask Without Eyes, Nose, or Mouth
 		 */
+		
+		this.rooms[37] = armorRoom;
 		
 		Room largeGallery = new Room(
 				"Large Gallery",
@@ -478,6 +539,8 @@ public class RoomManager {
 		 * Items: Death Mask without a Mouth
 		 */
 		
+		this.rooms[38] = largeGallery;
+		
 		Room deerRoom = new Room(
 				"Deer Room",
 				"a small room",
@@ -490,6 +553,8 @@ public class RoomManager {
 		 * Items: Red Herb
 		 */
 		
+		this.rooms[39] = deerRoom;
+		
 		Room scientistRoom = new Room(
 				"Scientist's Room",
 				"a scientific-looking room",
@@ -501,6 +566,8 @@ public class RoomManager {
 		 * Items: Researcher's Will, Fish hook, Bee Specimen, Lure without a Hook, Wind Crest
 		 */
 		
+		this.rooms[40] = scientistRoom;
+		
 		Room bedroom = new Room(
 				"Bedroom",
 				"a small bedroom",
@@ -511,6 +578,8 @@ public class RoomManager {
 		 * Exits: East: Deer Room
 		 * Items: Fist Aid Box, First Aid Spray, Ink Ribbon x3, Green Herb
 		 */
+		
+		this.rooms[41] = bedroom;
 		
 		Room pillarRoom = new Room(
 				"Pillar Room",
@@ -525,6 +594,8 @@ public class RoomManager {
 		 * Items: Green Herb, Radio
 		 */
 		
+		this.rooms[42] = pillarRoom;
+		
 		Room greenhouse = new Room(
 				"Greenhouse",
 				"a room filled with plants",
@@ -536,6 +607,8 @@ public class RoomManager {
 		 * Items: Green Herb x5, Death Mask Without Eyes
 		 */
 		
+		this.rooms[43] = greenhouse;
+		
 		Room atticEntry = new Room(
 				"Attic Entry",
 				"a small hallway",
@@ -545,6 +618,8 @@ public class RoomManager {
 		 * Exits: NorthWest: Small Dining Room
 		 * 		  East: Attic
 		 */
+		
+		this.rooms[44] = greenhouse;
 		
 		Room smallDiningRoom = new Room(
 				"Small Dining Room",
@@ -556,6 +631,8 @@ public class RoomManager {
 		 * Exits: NorthEast: Attic Entry
 		 * Items: Handgun Magazine 1x15, Handgun Magazine 1x15, Music mid-pages
 		 */
+		
+		this.rooms[45] = smallDiningRoom;
 		
 		Room pianoBar = new Room(
 				"Piano Bar",
@@ -569,6 +646,8 @@ public class RoomManager {
 		 * Items: Missing Music, Gold Emblem, Trevor's Diary
 		 */
 		
+		this.rooms[46] = pianoBar;
+		
 		Room roofedPassage = new Room(
 				"Roofed Passage",
 				"a curved hallway with a roof",
@@ -577,6 +656,8 @@ public class RoomManager {
 		/*
 		 * Exits: NorthWest: Garden Shed
 		 */
+		
+		this.rooms[47] = roofedPassage;
 		
 		Room gardenShed = new Room(
 				"Garden Shed",
@@ -588,6 +669,8 @@ public class RoomManager {
 		 * Items: Shotgun Shells 1x6, Battery Pack, First Aid Spray x2, Grenade Shells 1x6
 		 */
 		
+		this.rooms[48] = gardenShed;
+		
 		Room courtyardStudy = new Room(
 				"Courtyard Study",
 				"a small study",
@@ -596,6 +679,8 @@ public class RoomManager {
 		 * Exits: South: Dark Corridor
 		 * Items: Shotgun Shells 1x6, Metal Object, Battery Pack
 		 */
+		
+		this.rooms[49] = courtyardStudy;
 		
 		Room eCorridor = new Room(
 				"Elevator Corridor",
@@ -608,6 +693,8 @@ public class RoomManager {
 		 * Items: Green Herb x2, Red Herb x1
 		 */
 		
+		this.rooms[50] = eCorridor;
+		
 		Room materialsRoom = new Room(
 				"Materials Room",
 				"a small room",
@@ -617,6 +704,8 @@ public class RoomManager {
 		 * Items: Shotgun Shells 1x6, Acid Shells 1x6, Battery Pack, Battery
 		 */
 		
+		this.rooms[51] = materialsRoom;
+		
 		Room trophyRoom = new Room(
 				"Trophy Room",
 				"a room with lots of display cases",
@@ -625,6 +714,8 @@ public class RoomManager {
 		 * Exits: Southeast: West Wing Inner Stairway
 		 * Items: Grenade Shells 1x6, Red Gemstone, Yellow Gemstone, Mail to the Chief of Security, Dagger
 		 */
+		
+		this.rooms[52] = trophyRoom;
 		
 		Room attic = new Room(
 				"Attic",
@@ -637,71 +728,6 @@ public class RoomManager {
 		 * Items: Death Mask Without a Nose, Assault Shotgun
 		 */
 		
-		startingRoom = foyer1F;
-		
-		rooms[0] = foyer1F;
-		rooms[1] = diningRoom;
-		rooms[2] = teaRoom;
-		rooms[3] = westWingOuterStairway;
-		rooms[4] = mirrorCorridor;
-		rooms[5] = diningHall2F;
-		rooms[6] = foyer2F;
-		rooms[7] = graveyard;
-		rooms[8] = crypt;
-		rooms[9] = artRoom;
-		rooms[10] = lCorridor;
-		rooms[11] = windingCorridor;
-		rooms[12] = marbleRoom;
-		rooms[13] = livingRoom;
-		rooms[14] = darkCorridor;
-		rooms[15] = eastWingStairway1F;
-		rooms[16] = eastWingStoreroom;
-		rooms[17] = eastWingStairway2F;
-		rooms[18] = cCorridor;
-		rooms[19] = smallLibrary;
-		rooms[20] = restingRoom;
-		rooms[21] = slidingTrapRoom;
-		rooms[22] = outsideBoiler;
-		rooms[23] = bathroom;
-		rooms[24] = outsideBalcony;
-		rooms[25] = teaRoomB1;
-		rooms[26] = kitchen;
-		rooms[27] = uGPassage1;
-		rooms[28] = uGPassage2;
-		rooms[29] = westWingInnerStairway2F;
-		rooms[30] = westWingInnerStairway1F;
-		rooms[31] = medicalStorageRoom;
-		rooms[32] = smallStoreroom;
-		rooms[33] = deathPassage;
-		rooms[34] = northernCorridor;
-		rooms[35] = researcherRoom;
-		rooms[36] = tigerRoom;
-		rooms[37] = hiddenWardrobe;
-		rooms[38] = outsidePatio;
-		rooms[39] = armorRoom;
-		rooms[40] = largeGallery;
-		rooms[41] = deerRoom;
-		rooms[42] = scientistRoom;
-		rooms[43] = bedroom;
-		rooms[44] = pillarRoom;
-		rooms[45] = greenhouse;
-		rooms[46] = atticEntry;
-		rooms[47] = smallDiningRoom;
-		rooms[48] = pianoBar;
-		rooms[49] = roofedPassage;
-		rooms[50] = gardenShed;
-		rooms[51] = courtyardStudy;
-		rooms[52] = eCorridor;
-		rooms[53] = materialsRoom;
-		rooms[54] = trophyRoom;
-		rooms[55] = attic;
-	}
-	
-	public static Room[] getRooms() {
-		return rooms;
-	}
-	
-	public static Room getStartingRoom() {
-		return startingRoom;
+		this.rooms[53] = attic;
 	}
 }
