@@ -9,58 +9,105 @@ public class Main {
 	private static Player player = new Player();
 	private static boolean quit;
 	
-	private static void printRoom(Player player) {
-		if (player.currentRoom != null) {
-			System.out.println(player.currentRoom.name);
+	private static void printRoom() {
+		if (player.getCurrentRoom() != null) {
+			System.out.println(player.getCurrentRoom().getName());
 			System.out.println();
-			System.out.println(player.currentRoom.longDescription);
+			System.out.println(player.getCurrentRoom().getLongDescription());
 			System.out.println();
 			
-			System.out.println("Exits");
+			System.out.println("Exits: ");
+			return;
 		}
+		
+		for (int i = 0; i < player.getCurrentRoom().getExits().length; i++)
+		{
+			Room exit = player.getCurrentRoom().getExits()[i];
+			
+			if (exit != null) {
+				switch(i) {
+				case 0: System.out.println("[North]:" + exit.getShortDescription()); break;
+				case 1: System.out.println("[South]:" + exit.getShortDescription()); break;
+				case 2: System.out.println("[East]:" + exit.getShortDescription()); break;
+				case 3: System.out.println("[West]:" + exit.getShortDescription()); break;
+				case 4: System.out.println("[Northwest]:" + exit.getShortDescription()); break;
+				case 5: System.out.println("[Southwest]:" + exit.getShortDescription()); break;
+				case 6: System.out.println("[Northeast]:" + exit.getShortDescription()); break;
+				case 7: System.out.println("[Southeast]:" + exit.getShortDescription()); break;
+				case 8: System.out.println("[Up]:" + exit.getShortDescription()); break;
+				case 9: System.out.println("[Down]:" + exit.getShortDescription()); break;
+				}
+			}
+		}
+		System.out.print("> ");
 	}
+		
 	
 	private static String[] collectInput(Scanner scanner) {
 		String[] input = null;
 		
 		if (scanner.hasNext()) input = scanner.nextLine().toLowerCase().split(" ");
+		
 		return input;
 	}
 	
-	private static boolean parse(String[] command){
-		if (command == null || command.length == 0) return false;
+	private static void parse(String[] command){
+		if (command == null || command.length == 0) return;
 		
 		switch (command[0]) {
+		case "north":
+		case "south":
+		case "east":
+		case "west":
+		case "northwest":
+		case "southwest":
+		case "northEast":
+		case "southEast":
+		case "up":
+		case "down":
 		case "go":
-			if (command.length == 2) {
-				player.currentRoom = player.currentRoom.getExit(command[1]);
-				return true;
+			//make sure the player types the correct command format: 'go (direction)
+			if (command[0].equals("go")) {
+				if(command.length == 2) {
+					if(player.getCurrentRoom().getExit(command[1]) == null) {
+						System.out.println("That is an invalid command.");
+						System.out.println("> ");
+						break;
+					} else {
+						player.setCurrentRoom(player.getCurrentRoom().getExit(command[1]));
+						printRoom();
+						break;
+					}
+				} else {
+					System.out.println("Where are you going to go?");
+					System.out.println("> ");
+					break;
+				}
 			} else {
-				System.out.println("\"go\" must be followed by a valid direction.");
-				return false;
+				player.setCurrentRoom(player.getCurrentRoom().getExit(command[0]));
+				printRoom();
+				break;
 			}
-		case "quit": quit = true; return true;
+		case "quit": quit = true; break;
+		case "room": printRoom(); break;
+		default:
+			System.out.println("I don't understand that command.");
+			System.out.print("> ");
+			break;
 		}
-		return false;
 	}
 	
 	public void main(String[] args) {
-		RoomManager.init(); //requires cleaning up room manger
-		player = new Player(RoomManager.getStartingRoom()); //requires cleaning up room manager
+		RoomManager.init();
+		player = new Player(RoomManager.getStartingRoom());
 		Scanner scanner = new Scanner(System.in);
 		
+		printRoom();
 		do {
-			System.out.println("Enter \"quit\" to quit the game.\n");
-			printRoom(player);
-			if (!parse(collectInput(scanner))) System.out.println("Please enter a valid command.");
-		}while (!quit);
+			parse(collectInput(scanner));
+		}while(!quit);
 		
-		System.out.println("Thanks for playing!");
+		System.out.println("The Mansion awaits your next visit...");
 		scanner.close();
-		
-	}
-	
-	private static void parse(String[] command, Player player) {
-		
 	}
 }

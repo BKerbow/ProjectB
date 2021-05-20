@@ -1,13 +1,13 @@
 package dev.kerbow.fixtures;
 
 public class Room extends Fixtures {
-	
+
 	private Room[] exits = new Room[9];
-	
+
 	public Room(String name, String shortDescription, String longDescription) {
 		super(name, shortDescription, longDescription);
 	}
-	
+
 	public void initExits(Room north, Room south, Room west, Room east,
 			Room northwest, Room southwest, Room northeast, Room southeast,
 			Room up, Room down) {
@@ -22,13 +22,13 @@ public class Room extends Fixtures {
 		this.exits[8] = up;
 		this.exits[9] = down;
 	}
-	
-	
+
+
 	public Room[] getExits() {
 		return this.exits;
-		
+
 	}
-	
+
 	public Room getExit(String direction) {
 		switch(direction.toLowerCase()) {
 		case "north": return this.exits[0];
@@ -42,7 +42,6 @@ public class Room extends Fixtures {
 		case "up": return this.exits[8];
 		case "down": return this.exits[9];
 		default: return null;
-		}
-		
+		}	
 	}
 }

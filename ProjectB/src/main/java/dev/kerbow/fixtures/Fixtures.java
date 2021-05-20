@@ -9,4 +9,16 @@ public abstract class Fixtures {
 		this.shortDescription = shortDescription;
 		this.longDescription = longDescription;
 	}
+
+	public String getName() {
+		return name;
+	}
+
+	public String getShortDescription() {
+		return shortDescription;
+	}
+
+	public String getLongDescription() {
+		return longDescription;
+	}	
 }
