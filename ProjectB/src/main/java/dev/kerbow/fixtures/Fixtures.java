@@ -13,6 +13,10 @@ public abstract class Fixtures {
 	public String getName() {
 		return name;
 	}
+	
+	public String getCapitalName() {
+		return ("" + this.name.charAt(0)).toUpperCase() + this.name.substring(1, this.name.length());
+	}
 
 	public String getShortDescription() {
 		return shortDescription;

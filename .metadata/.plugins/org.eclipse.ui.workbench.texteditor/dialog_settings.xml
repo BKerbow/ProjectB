@@ -6,16 +6,21 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value=""/>
+		<item key="selection" value="deathPassage"/>
 		<list key="findhistory">
+			<item value="deathPassage"/>
+			<item value="strange"/>
+			<item value="death"/>
+			<item value="gague"/>
 			<item value="northenCorridor"/>
 			<item value="package dev.kerbow.fixtures;"/>
 		</list>
 		<list key="replacehistory">
+			<item value="gauge"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="853"/>
+		<item key="DIALOG_X_ORIGIN" value="668"/>
 		<item key="DIALOG_Y_ORIGIN" value="95"/>
 		<item key="DIALOG_WIDTH" value="298"/>
 		<item key="DIALOG_HEIGHT" value="407"/>

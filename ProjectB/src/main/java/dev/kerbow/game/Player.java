@@ -17,6 +17,6 @@ public class Player {
 	}
 	
 	public Room getCurrentRoom() {
-		return this.getCurrentRoom();
+		return this.currentRoom;
 	}
 }

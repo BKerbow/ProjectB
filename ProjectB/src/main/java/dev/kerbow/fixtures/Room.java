@@ -1,8 +1,13 @@
 package dev.kerbow.fixtures;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class Room extends Fixtures {
 
-	private Room[] exits = new Room[9];
+	private Room[] exits = new Room[10];
+	private Map<String, Fixtures> fixtures = new HashMap<String, Fixtures>();
+	private boolean hasFixtures = false;
 
 	public Room(String name, String shortDescription, String longDescription) {
 		super(name, shortDescription, longDescription);
@@ -43,5 +48,18 @@ public class Room extends Fixtures {
 		case "down": return this.exits[9];
 		default: return null;
 		}	
+	}
+	
+	public void addFixture(String fixtureName, Fixtures fixture) {
+		this.fixtures.put(fixtureName.toLowerCase(), fixture);
+		this.hasFixtures = true;
+	}
+	
+	public Fixtures getFixture(String fixtureName) {
+		return this.fixtures.get(fixtureName);
+	}
+	
+	public boolean hasFixtures() {
+		return this.hasFixtures;
 	}
 }
